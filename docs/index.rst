@@ -8,7 +8,7 @@ package. The utilities are grouped into several modules within the package, each
 of them is documented below:
 
 :doc:`xlutils.copy <copy>`
-  Tools for copying :class:`xlrd.Book` objects to :class:`xlwt.Workbook` objects.
+  Tools for copying :class:`xlrd.Book` objects to :py:class:`xlwt.Workbook.Workbook` objects.
 
 :doc:`xlutils.display <display>`
   Utility functions for displaying information about :mod:`xlrd`-related
