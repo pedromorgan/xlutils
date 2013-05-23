@@ -1,0 +1,48 @@
+{%- extends "basic/layout.html" %}
+
+{% block header %}
+    <style>
+        .lxhead{
+            margin: 10px;
+            text-shadow: 1px 1px 1px #444444;
+        }
+        .pyxll {
+            float: right;
+            margin-right: 150px;
+        }
+        .pyxll li {
+            display: inline;
+            list-style-type: none;
+            margin: 2px;
+             width: 50px;
+        }
+        .pyxll a {
+            text-decoration: none;
+            background-color: #333333;
+            color: #eeeeee;
+            border-radius: 5px;
+            padding: 5px;
+           
+            font-family: Verdana;
+            font-size: 12pt;
+            font-weight: bold;
+         }
+        .pyxll a:hover {
+            color: black;
+            background-color: #999999;
+        }
+        .pyxll a.xlsel{
+            background-color: white;
+            color: black;
+        }
+    </style>
+   <a href="https://github.com/python-excel/{{XL.mod}}"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+  <ul class="pyxll">
+    <li><a href="https://python-excel-manual.readthedocs.org/en/latest/"{% if XL.mod == "tutorial" %}class="xlsel"{% endif %}>Home</a></li>
+    <li><a href="https://xlrd.readthedocs.org/en/latest/"  {% if XL.mod == "xlrd" %}class="xlsel"{% endif %}>xlrd</a></li>
+    <li><a href="https://xlwt.readthedocs.org/en/latest/"{% if XL.mod == "xlwt" %}class="xlsel"{% endif %}>xlwt</a></li>
+    <li><a href="https://xlutils.readthedocs.org/en/latest/"{% if XL.mod == "xlutils" %}class="xlsel"{% endif %}>xlutils</a></li>
+  </ul>
+  <h1 class="lxhead">python-excel</h1>
+  {{ super() }}
+{% endblock %}

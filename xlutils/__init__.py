@@ -10,8 +10,8 @@ __author__ = "Copyright (c) 2008 Simplistix Ltd"
 __license__ = "== TODO =="
 
 ## Ssuggested by pete
-__PYTHON_EXCEL_MODULE__ = "xlwt"
-__PYTHON_EXCEL_TITLE__ = "xlwt - Excel writer"
+__PYTHON_EXCEL_MODULE__ = "xlutils"
+__PYTHON_EXCEL_TITLE__ = "xlutils - Excel Utilities"
 
 
 __docformat__ = 'restructuredtext en'

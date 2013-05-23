@@ -1,0 +1,51 @@
+{% extends "!page.html" %}
+ {%- block document %}
+      <style>
+      .admonition-todo{
+          background-color: #EBE2F2;
+      }
+      .rtkit {
+          font-size: 8pt;
+          }
+          .rtkitd ul{
+              padding-left: 25px;
+              }
+      </style>
+      <div class="documentwrapper">
+      {%- if render_sidebar %}
+        <div class="bodywrapper">
+      {%- endif %}
+
+          <div class="body" style="padding-right: 0;">
+             <div style="background-color: #dddddd; float: right; width: 250px; font-size: 9pt;" class="rtkitd">
+                          {{toctree() }}
+                          <h4>Project Links</h4>
+                          <ul>
+                            <li>Home Page<br>
+                                <a class="rtkit" target="_blank" href="http://www.python-excel.org/">www.python-excel.org/</a>
+                            </li>
+                            <li>Source Code at github<br>
+                                <a class="rtkit" target="_blank" href="https://github.com/python-excel">github.com/python-excel/</a>
+                            </li>
+                            <li>Latest Documentation<br>
+                                <a class="rtkit"  target="_blank" href="https://{{XL.mod}}.readthedocs.org/">{{XL.mod}}.readthedocs.org/</a>
+                            </li>
+                            <li>Travis CI (currently petes repo)<br>
+                                <a class="rtkit"  target="_blank" href="https://travis-ci.org/pedromorgan/{{XL.mod}}">https://travis-ci.org/pedromorgan/{{XL.mod}}</a><br>
+                                <img src="https://secure.travis-ci.org/pedromorgan/{{XL.mod}}.png?branch=master">
+                            </li>
+                            
+                           </ul>
+                          
+                          
+            </div>
+            <div style="margin-right: 260px;">
+            {% block body %}{{ super() }} {% endblock %}
+            </div>
+          </div>
+          
+      {%- if render_sidebar %}
+        </div>
+      {%- endif %}
+      </div>
+  {%- endblock %}
